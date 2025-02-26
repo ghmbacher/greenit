@@ -1,0 +1,38 @@
+\documentclass[ngerman]{article}
+\usepackage{graphicx} % Für Bilder
+\usepackage{adjustbox} % Für Rotationen und Skalierungen
+\usepackage[a4paper,margin=2.5cm]{geometry} % Ränder setzen
+\usepackage[ngerman]{babel} % Deutsche Spracheinstellungen
+\usepackage{csquotes} % Korrekte Anführungszeichen
+\usepackage{datetime} % Für deutsches Datum
+\renewcommand{\dateseparator}{.} % Punkt als Datumstrenner
+
+\begin{document}
+
+\title{Hausübung 1; UV WAP WS 2024/25}
+\author{Gerwin Bacher \\
+MatrNr: 12314104}
+\date{\today}
+
+\maketitle
+
+\begin{table}[h!]
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Originalgröße} & \textbf{Skaliert (50\%)} & \textbf{Rotiert (45°)} \\
+\hline
+\includegraphics[width=0.25\textwidth]{image.png} &
+\includegraphics[width=0.125\textwidth]{image.png} &
+\adjustbox{rotate=45}{\includegraphics[width=0.25\textwidth]{image.png}} \\
+\hline
+\textbf{Skaliert (150\%)} & \textbf{Skaliert + + Rotiert (30°)} & \textbf{Kleine Größe + Rotiert (90°)} \\
+\hline
+\includegraphics[width=0.375\textwidth]{image.png} &
+\adjustbox{rotate=30}{\includegraphics[width=0.125\textwidth]{image.png}} &
+\adjustbox{rotate=90}{\includegraphics[width=0.075\textwidth]{image.png}} \\
+\hline
+\end{tabular}
+\caption{Tabelle mit unterschiedlich skalierten und rotierten Bildern}
+\end{table}
+
+\end{document}
